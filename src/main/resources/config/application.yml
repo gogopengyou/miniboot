@@ -1,0 +1,27 @@
+name: yangzj
+age: 18
+#flag: true
+
+date: 2020-03-23
+
+person1: {name:yangzj, age:18}
+
+person2:
+    name: yangzj
+    age: 18
+
+list1: [a, b, c]
+
+list2:
+    - a
+    - b
+    - c
+
+persons:
+    - name: yangzj
+      age: 18
+    - name: zhangsan
+      age: 20
+    - {name:lisi, age:25}
+
+
