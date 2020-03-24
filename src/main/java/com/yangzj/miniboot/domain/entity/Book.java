@@ -13,4 +13,12 @@ public class Book {
     private String name;
 
     private String description;
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
