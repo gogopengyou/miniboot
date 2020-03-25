@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserDTO {
     private String name;
-    private int age;
+    private Integer age;
     private String companyName;
     private String schoolName;
 }
