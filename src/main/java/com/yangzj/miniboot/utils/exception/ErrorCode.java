@@ -16,6 +16,11 @@ public enum ErrorCode {
      */
     RESOURCE_NOT_FOUND(1001, HttpStatus.NOT_FOUND, "未找到该资源"),
 
+    /**
+     * 服务器内部异常
+     */
+    INTERNAL_SERVER_ERROR(1000, HttpStatus.INTERNAL_SERVER_ERROR, "服务器内部发生异常"),
+
 
     /**
      * 格式验证失败异常

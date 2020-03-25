@@ -1,7 +1,9 @@
 package com.yangzj.miniboot.utils.exception.handler;
 
+import com.google.common.collect.ImmutableMap;
 import com.yangzj.miniboot.utils.exception.BaseException;
 import com.yangzj.miniboot.utils.exception.ErrorReponse;
+import com.yangzj.miniboot.utils.exception.InternalServerException;
 import com.yangzj.miniboot.utils.exception.ResourceNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -30,6 +32,13 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(BaseException.class)
     public ResponseEntity<?> handleAppException(BaseException ex, HttpServletRequest request) {
+        ErrorReponse representation = new ErrorReponse(ex, request.getRequestURI());
+        return new ResponseEntity<>(representation, new HttpHeaders(), ex.getError().getStatus());
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<?> handleGlobalException(RuntimeException rex, HttpServletRequest request) {
+        BaseException ex = new InternalServerException(ImmutableMap.of(rex.toString(), rex.getMessage()));
         ErrorReponse representation = new ErrorReponse(ex, request.getRequestURI());
         return new ResponseEntity<>(representation, new HttpHeaders(), ex.getError().getStatus());
     }
