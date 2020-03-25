@@ -73,4 +73,19 @@ public class PersonRepositoryTest {
         // 清空数据库
         personRepository.deleteAll();
     }
+
+
+    /*//分页选项
+    PageRequest pageRequest = PageRequest.of(0, 3, Sort.Direction.DESC, "age");
+    Page<UserDTO> userInformationList = personRepository.getUserInformationList(pageRequest);
+    //查询结果总数
+    System.out.println(userInformationList.getTotalElements());// 6
+    //按照当前分页大小，总页数
+    System.out.println(userInformationList.getTotalPages());// 2
+    System.out.println(userInformationList.getContent());*/
+
+    /*List<String> personList=new ArrayList<>(Arrays.asList("person1","person2"));
+    List<UserDTO> userDTOS = personRepository.filterUserInfo(personList);*/
+
+    /*List<UserDTO> userDTOS = personRepository.filterUserInfoByAge(19,20);*/
 }
