@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * description:该类作为系统异常类基类（实际继承自 运行时异常 unchecked）
+ * description:该类作为系统[自定义]异常类基类（实际继承自 运行时异常 unchecked）
  *
  * @author yangzj
  * @date 2020/03/25

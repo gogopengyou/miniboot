@@ -27,14 +27,19 @@ public class ExceptionTestController {
         b2.setDescription("222");
         // {"code":1001,"status":404,"message":"未找到该资源","path":"/exception/test",
         // "timestamp":"2020-03-24T23:31:16.991Z","data":{"name":"test1","description":"111"}}
-        //throw new ResourceNotFoundException(ImmutableMap.of("name", b1.getName(), "description", b1.getDescription()));
+        throw new ResourceNotFoundException(ImmutableMap.of("name", b1.getName(), "description", b1.getDescription()));
 
         //{"code":1000,"status":500,"message":"服务器内部发生异常","path":"/exception/test",
         // "timestamp":"2020-03-25T00:25:23.192Z","data":{"java.lang.ArithmeticException: / by zero":"/ by zero"}}
         //int a = 1/0;
 
-        String c = "1";
-        c.substring(5);
+        /*String c = "1";
+        c.substring(5);*/
+    }
+
+    @GetMapping("test2")
+    public void test2() {
+        int a = 1/0;
     }
 
 }

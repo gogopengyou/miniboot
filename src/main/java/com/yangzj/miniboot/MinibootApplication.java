@@ -2,6 +2,7 @@ package com.yangzj.miniboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 
 /**
  * description：The Project's boot application.
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author yangzj
  * @date 2020/03/22
  */
+@ServletComponentScan
 @SpringBootApplication
 public class MinibootApplication {
 
