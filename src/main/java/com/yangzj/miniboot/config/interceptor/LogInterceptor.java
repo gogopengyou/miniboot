@@ -18,11 +18,11 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         long startTime = System.currentTimeMillis();
-        System.out.println("\n-------- LogInterception.preHandle --- ");
+        /*System.out.println("\n-------- LogInterception.preHandle --- ");
         System.out.println("Request URL: " + request.getRequestURL());
         System.out.println("Start Time: " + System.currentTimeMillis());
 
-        request.setAttribute("startTime", startTime);
+        request.setAttribute("startTime", startTime);*/
 
         return true;
     }
@@ -41,14 +41,14 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, //
                                 Object handler, Exception ex) throws Exception {
-        System.out.println("\n-------- LogInterception.afterCompletion --- ");
+        /*System.out.println("\n-------- LogInterception.afterCompletion --- ");
 
         long startTime = (Long) request.getAttribute("startTime");
         long endTime = System.currentTimeMillis();
         System.out.println("Request URL: " + request.getRequestURL());
         System.out.println("End Time: " + endTime);
 
-        System.out.println("Time Taken: " + (endTime - startTime));
+        System.out.println("Time Taken: " + (endTime - startTime));*/
     }
 
 }
