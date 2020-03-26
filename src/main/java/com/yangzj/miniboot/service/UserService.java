@@ -1,8 +1,7 @@
 package com.yangzj.miniboot.service;
 
-import com.yangzj.miniboot.domain.dao.UserDao;
+import com.yangzj.miniboot.domain.dao.db1.UserDao;
 import com.yangzj.miniboot.domain.entity.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

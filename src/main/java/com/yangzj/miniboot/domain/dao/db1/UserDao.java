@@ -1,14 +1,13 @@
-package com.yangzj.miniboot.domain.dao;
+package com.yangzj.miniboot.domain.dao.db1;
 
 import com.yangzj.miniboot.domain.entity.User;
 import org.apache.ibatis.annotations.*;
-
-import org.springframework.stereotype.Repository;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.List;
 
-//@Repository
-@Mapper
+@Qualifier("db1SqlSessionTemplate")
+//@Mapper
 public interface UserDao {
 
     /**
