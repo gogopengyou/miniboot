@@ -40,3 +40,17 @@ kafka:
     my-topic2: my-topic2
 
 
+#可尝试通过context.registerBean，实现基于yml配置自动创建 Topic Bean。（无需通过method @Bean方式，topic量大时考虑～）
+#kafka:
+#  topics:
+#    - name: topic1
+#      num-partitions: 3
+#      replication-factor: 1
+#    - name: topic2
+#      num-partitions: 1
+#      replication-factor: 1
+#    - name: topic3
+#      num-partitions: 2
+#      replication-factor: 1
+
+
