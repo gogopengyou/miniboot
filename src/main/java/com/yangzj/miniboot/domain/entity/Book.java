@@ -1,6 +1,8 @@
 package com.yangzj.miniboot.domain.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * description: book entity.
@@ -9,6 +11,8 @@ import lombok.Data;
  * @date 2020/03/23
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Book {
     private String name;
 
