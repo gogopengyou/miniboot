@@ -18,8 +18,8 @@ kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic kafka-test-
 
 other:
 cd kafka/bin/windows
-zoo-start properties
-kafka-start properties
+zoo-start zookeeper.properties
+kafka-start server.properties
 
 idea plugin tools:
 - zoolytic
